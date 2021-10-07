@@ -9,6 +9,7 @@ const getWeather = async function(){
     } catch (error) {
         if (error.message === "Network Error") {
             console.log("Could not get data!");
+            document.querySelector("body").innerHTML = "We're having a little trouble getting the weather data. Are you sure weather still exists?";
 
         } else {
             console.log("A buffalo has chewed through your electric cable. Your computer will self-destruct in 30 seconds. Vacate.");
