@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <div class = "weatherData">
     <p>Your latitude is {{ weatherData.coord.lat }}</p>
     <p>Your longitude is {{ weatherData.coord.lon }}</p>
     <p>The current weather condition is {{ weatherData.weather[0].main }}</p>
@@ -21,7 +22,7 @@
     <p>Sunset will be {{ this.weatherData.sys.sunset }} seconds after January 1, 1970 00:00:00</p>
     <p>Adjust UTC {{ this.weatherData.timezone }} seconds for your timezone</p>
     <p>You are in {{ this.weatherData.name }}</p>
-
+    </div>
     <canvas ref="testcan" width="400" height="400"></canvas>
   </div>
 </template>
@@ -66,26 +67,31 @@ export default {
     this.draw();
     //Not used: weather.id, weather.icon, base, sys.type, sys.id, sys.message, id, cod, rain.1h, rain.3h, snow.1h, snow.3h, main.sea_level, main.ground_level
   },
+  updated() {
+    this.draw();
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.weatherData {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+p {
+  border: 2px solid orange;
+  margin: 5px;
+  padding: 10px;
+  width: 100px;
+  height: 130px;
 }
 canvas {
   border: 1px solid black;
+  width:400px;
+  height: 400px;
 }
 </style>
