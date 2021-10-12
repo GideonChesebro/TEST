@@ -78,6 +78,8 @@ export default {
 .weatherData {
   display: flex;
   flex-wrap: wrap;
+  width: 50%;
+  margin-left: 25%;
   justify-content: center;
 
 
