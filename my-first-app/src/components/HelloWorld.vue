@@ -23,7 +23,6 @@
     <p>Adjust UTC {{ this.weatherData.timezone }} seconds for your timezone</p>
     <p>You are in {{ this.weatherData.name }}</p>
     </div>
-    <canvas ref="testcan" width="400" height="400"></canvas>
   </div>
 </template>
 
@@ -34,8 +33,6 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      canvas: null,
-      ctx: null,
       weatherData: null,
     };
   },
@@ -47,29 +44,12 @@ export default {
       this.weatherData = await data.getWeather();
       return this.weatherData;
     },
-    draw: function () {
-      let canvas = this.$data.canvas;
-      let ctx = this.$data.ctx;
-      let px = Math.floor(canvas.width / 20);
-      ctx.fillStyle = "#00afaf";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#ffffff";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.font = px + "px wingdings";
-      ctx.fillText("Hello Vue Canvas!", canvas.width / 2, canvas.height / 8);
-    },
   },
   async mounted() {
     await this.loadWeather();
-    this.$data.canvas = this.$refs["testcan"];
-    this.$data.ctx = this.$refs["testcan"].getContext("2d");
-    this.draw();
     //Not used: weather.id, weather.icon, base, sys.type, sys.id, sys.message, id, cod, rain.1h, rain.3h, snow.1h, snow.3h, main.sea_level, main.ground_level
   },
-  updated() {
-    this.draw();
-  },
+
 };
 </script>
 
@@ -90,10 +70,5 @@ p {
   padding: 10px;
   width: 100px;
   height: 130px;
-}
-canvas {
-  border: 1px solid black;
-  width:400px;
-  height: 400px;
 }
 </style>
