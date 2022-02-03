@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <div class = "weatherData">
+    <div class = "weatherData" v-if="weatherData">
     <p>Your latitude is {{ weatherData.coord.lat }}</p>
     <p>Your longitude is {{ weatherData.coord.lon }}</p>
     <p>The current weather condition is {{ weatherData.weather[0].main }}</p>
