@@ -3,7 +3,6 @@ import * as axios from 'axios';
 const getWeather = async function(){
     try {
         const response = await axios.get('https://api.openweathermap.org/data/2.5/weather?q=forest%20hills&appid=d82f29bf2b7095caa3baf6c1b9e3a744&units=imperial');
-        console.log(response.data);
         const weather = response.data;
         return weather; 
     } catch (error) {
@@ -17,7 +16,7 @@ const getWeather = async function(){
 
     }
 
-    };
+};
 export const data = {
-    getWeather,
+    getWeather
 };
