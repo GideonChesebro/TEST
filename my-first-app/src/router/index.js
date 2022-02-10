@@ -1,10 +1,7 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router"
 import Home from '../views/Home.vue'
 import CanvasPage from '../views/canvasPage.vue'
 import SvgPage from '../views/svgPage.vue'
-
-Vue.use(VueRouter)
 
 const routes = [
   {
@@ -23,18 +20,17 @@ const routes = [
   {
     path: '/canvasPage',
     name: 'Canvas Page',
-    component: CanvasPage,
+    component: CanvasPage
   },
   {
     path: '/svgPage',
     name: 'SVG Page',
-    component: SvgPage,
-  }
+    component: SvgPage
+  },
 ]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(),
   routes
 })
 

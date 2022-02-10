@@ -173,6 +173,165 @@ export default {
       ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
       ctx.fill();
       ctx.restore();
+      //Path 2D example
+      ctx.save();
+      ctx.translate(625, 150);
+      let rectangle = new Path2D();
+      rectangle.rect(10, 10, 50, 50);
+
+      let circle = new Path2D();
+      circle.arc(100, 35, 25, 0, Math.PI * 2);
+
+      ctx.stroke(rectangle);
+      ctx.fill(circle);
+      ctx.restore();
+      //Path 2D SVG path example
+      ctx.save();
+      ctx.translate(175, 225);
+      let p = new Path2D("M10 10 h 80 v 80 h -80 Z");
+      ctx.stroke(p);
+      ctx.restore();
+      //fillStyle Rectangles
+      ctx.save();
+      ctx.translate(275, 250);
+      for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 6; j++) {
+          ctx.fillStyle =
+            "rgb(" +
+            Math.floor(255 - 42.5 * i) +
+            ", " +
+            Math.floor(255 - 42.5 * j) +
+            ", 0)";
+          ctx.fillRect(j * 20, i * 20, 20, 20);
+        }
+      }
+      ctx.restore();
+      //strokeStyle Circles
+      ctx.save();
+      ctx.translate(425, 250);
+      for (var ix = 0; ix < 6; ix++) {
+        for (var j = 0; j < 6; j++) {
+          ctx.strokeStyle =
+            "rgb(0, " +
+            Math.floor(255 - 42.5 * ix) +
+            ", " +
+            Math.floor(255 - 42.5 * j) +
+            ")";
+          ctx.beginPath();
+          ctx.arc(12.5 + j * 20, 12.5 + ix * 20, 10, 0, Math.PI * 2, true);
+          ctx.stroke();
+        }
+      }
+      ctx.restore();
+      //Microsoft opacity
+      ctx.save();
+      ctx.translate(600, 250);
+      ctx.fillStyle = "#FD0";
+      ctx.fillRect(0, 0, 75, 75);
+      ctx.fillStyle = "#6C0";
+      ctx.fillRect(75, 0, 75, 75);
+      ctx.fillStyle = "#09F";
+      ctx.fillRect(0, 75, 75, 75);
+      ctx.fillStyle = "#F30";
+      ctx.fillRect(75, 75, 75, 75);
+      ctx.fillStyle = "#FFF";
+      ctx.globalAlpha = 0.2;
+      for (var iy = 0; iy < 7; iy++) {
+        ctx.beginPath();
+        ctx.arc(75, 75, 10 + 10 * iy, 0, Math.PI * 2, true);
+        ctx.fill();
+      }
+      ctx.restore();
+      //Marching ants
+      ctx.save();
+      let offset = 0;
+      function AntsAnim() {
+        ctx.clearRect(180, 330, 70, 70);
+        ctx.setLineDash([4, 2]);
+        ctx.lineDashOffset = -offset;
+        ctx.strokeRect(190, 340, 50, 50);
+      }
+      function march() {
+        offset++;
+        if (offset > 16) {
+          offset = 0;
+        }
+        AntsAnim();
+        setTimeout(march, 20);
+      }
+      march();
+
+      ctx.restore();
+      //Linear gradient
+      ctx.save();
+      ctx.translate(10, 450);
+
+      let lingrad = ctx.createLinearGradient(0, 0, 0, 150);
+      lingrad.addColorStop(0, "#00ABEB");
+      lingrad.addColorStop(0.5, "#fff");
+      lingrad.addColorStop(0.5, "#26C000");
+      lingrad.addColorStop(1, "#fff");
+
+      let lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
+      lingrad2.addColorStop(0.5, "#000");
+      lingrad2.addColorStop(1, "rgba(0, 0, 0, 0)");
+
+      ctx.fillStyle = lingrad;
+      ctx.strokeStyle = lingrad2;
+
+      ctx.fillRect(10, 10, 130, 130);
+      ctx.strokeRect(50, 50, 50, 50);
+      ctx.restore();
+      //Radial gradient
+      ctx.save();
+      ctx.translate(200, 450);
+      let radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
+      radgrad.addColorStop(0, "#A7D30C");
+      radgrad.addColorStop(0.9, "#019F62");
+      radgrad.addColorStop(1, "rgba(1, 159, 98, 0)");
+
+      let radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
+      radgrad2.addColorStop(0, "#FF5F98");
+      radgrad2.addColorStop(0.75, "#FF0188");
+      radgrad2.addColorStop(1, "rgba(255, 1, 136, 0)");
+
+      let radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
+      radgrad3.addColorStop(0, "#00C9FF");
+      radgrad3.addColorStop(0.8, "#00B5E2");
+      radgrad3.addColorStop(1, "rgba(0, 201, 255, 0)");
+
+      let radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
+      radgrad4.addColorStop(0, "#F4F201");
+      radgrad4.addColorStop(0.8, "#E4C700");
+      radgrad4.addColorStop(1, "rgba(228, 199, 0, 0)");
+
+      ctx.fillStyle = radgrad4;
+      ctx.fillRect(0, 0, 150, 150);
+      ctx.fillStyle = radgrad3;
+      ctx.fillRect(0, 0, 150, 150);
+      ctx.fillStyle = radgrad2;
+      ctx.fillRect(0, 0, 150, 150);
+      ctx.fillStyle = radgrad;
+      ctx.fillRect(0, 0, 150, 150);
+      ctx.restore();
+
+      //Shadowed text
+      ctx.save();
+      ctx.translate(330,380);
+      ctx.shadowOffsetX = 2;
+      ctx.shadowOffsetY = 2;
+      ctx.shadowBlur = 2;
+      ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+      ctx.font = "20px Times New Roman";
+      ctx.fillStyle = "Black";
+      ctx.fillText("Sample String", 5, 30);
+      ctx.restore();
+
+      //Stroke text
+      ctx.font = '48px serif';
+      ctx.strokeText('Hello world', 125, 625);
+      ctx.save();
+      ctx.restore();
     },
   },
   mounted() {
