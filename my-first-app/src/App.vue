@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/canvasPage">Canvas Page</router-link> |
-      <router-link to="/svgPage">SVG Page</router-link>
+      <router-link to="/svgPage">SVG Page</router-link> |
+      <router-link to="/cssPage">CSS Page</router-link>
     </div>
     <router-view/>
   </div>

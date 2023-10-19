@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router"
 import Home from '../views/Home.vue'
 import CanvasPage from '../views/canvasPage.vue'
 import SvgPage from '../views/svgPage.vue'
+import CssPage from '../views/cssPage.vue'
 
 const routes = [
   {
@@ -27,6 +28,11 @@ const routes = [
     name: 'SVG Page',
     component: SvgPage
   },
+  {
+    path: '/cssPage',
+    name: 'CSS Page',
+    component: CssPage
+  }
 ]
 
 const router = createRouter({
