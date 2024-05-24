@@ -1,16 +1,71 @@
 <template>
   <div>
     <svg width="100" height="250" id="shapesEx">
-      <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
-      <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
-      <circle cx="25" cy="75" r="20" stroke="red" fill="transparent" stroke-width="5"/>
-      <ellipse cx="75" cy="75" rx="20" ry="5" stroke="red" fill="transparent" stroke-width="5"/>
-      <line x1="10" x2="50" y1="110" y2="150" stroke="orange" stroke-width="5"/>
-      <polyline points="60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145" stroke="orange" fill="transparent" stroke-width="5"/>
-      <polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180" stroke="green" fill="transparent" stroke-width="5"/>
+      <rect
+        x="10"
+        y="10"
+        width="30"
+        height="30"
+        stroke="black"
+        fill="transparent"
+        stroke-width="5"
+      />
+      <rect
+        x="60"
+        y="10"
+        rx="10"
+        ry="10"
+        width="30"
+        height="30"
+        stroke="black"
+        fill="transparent"
+        stroke-width="5"
+      />
+      <circle
+        cx="25"
+        cy="75"
+        r="20"
+        stroke="red"
+        fill="transparent"
+        stroke-width="5"
+      />
+      <ellipse
+        cx="75"
+        cy="75"
+        rx="20"
+        ry="5"
+        stroke="red"
+        fill="transparent"
+        stroke-width="5"
+      />
+      <line
+        x1="10"
+        x2="50"
+        y1="110"
+        y2="150"
+        stroke="orange"
+        stroke-width="5"
+      />
+      <polyline
+        points="60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145"
+        stroke="orange"
+        fill="transparent"
+        stroke-width="5"
+      />
+      <polygon
+        points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180"
+        stroke="green"
+        fill="transparent"
+        stroke-width="5"
+      />
       <!-- Capital letters are absolute coordinates, lowercase are relative to last point -->
       <!-- M is move to, L is line to, H is horizontal line, V is vertical line, Z is close path, C is cubic bezier curve, Q is quadratic bezier curve, S adds more cubic curves starting from the endpoint of the last cubic curve, T does the same as S but for quadratics -->
-      <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
+      <path
+        d="M20,230 Q40,205 50,230 T90,230"
+        fill="none"
+        stroke="blue"
+        stroke-width="5"
+      />
     </svg>
 
     <svg width="230" height="230">
@@ -25,15 +80,57 @@
     </svg>
 
     <svg width="200" height="200">
-      <line x1="160" x2="160" y1="150" y2="80" stroke="black" stroke-width="10" stroke-linecap="round"/>
-      <polyline points="40 60 80 20 120 60" stroke="black" stroke-width="10" stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
-      <polyline points="40 120 80 80 120 120" stroke="black" stroke-width="10" stroke-linecap="round" fill="none" stroke-linejoin="round"/>
-      <polyline points="40 180 80 140 120 180" stroke="black" stroke-width="10" stroke-linecap="square" fill="none" stroke-linejoin="bevel"/>
+      <line
+        x1="160"
+        x2="160"
+        y1="150"
+        y2="80"
+        stroke="black"
+        stroke-width="10"
+        stroke-linecap="round"
+      />
+      <polyline
+        points="40 60 80 20 120 60"
+        stroke="black"
+        stroke-width="10"
+        stroke-linecap="butt"
+        fill="none"
+        stroke-linejoin="miter"
+      />
+      <polyline
+        points="40 120 80 80 120 120"
+        stroke="black"
+        stroke-width="10"
+        stroke-linecap="round"
+        fill="none"
+        stroke-linejoin="round"
+      />
+      <polyline
+        points="40 180 80 140 120 180"
+        stroke="black"
+        stroke-width="10"
+        stroke-linecap="square"
+        fill="none"
+        stroke-linejoin="bevel"
+      />
     </svg>
 
     <svg width="110" height="100">
-      <path d="M 10 50 Q 30 10 50 50 T 100 50" stroke="black" stroke-linecap="round" stroke-dasharray="5,10,5" fill="none"/>
-      <path d="M 10 50 L 100 50" stroke="red" stroke-linecap="round" stroke-width="1" stroke-dasharray="5,5" fill="none"/>
+      <path
+        d="M 10 50 Q 30 10 50 50 T 100 50"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-dasharray="5,10,5"
+        fill="none"
+      />
+      <path
+        d="M 10 50 L 100 50"
+        stroke="red"
+        stroke-linecap="round"
+        stroke-width="1"
+        stroke-dasharray="5,5"
+        fill="none"
+      />
     </svg>
 
     <svg width="70" height="130">
@@ -48,7 +145,15 @@
         <stop offset="100%" stop-color="blue" />
       </linearGradient>
       <rect id="rect1" x="10" y="10" rx="15" ry="15" width="50" height="50" />
-      <rect x="10" y="70" rx="15" ry="15" width="50" height="50" fill="url(#Gradient2)"/>
+      <rect
+        x="10"
+        y="70"
+        rx="15"
+        ry="15"
+        width="50"
+        height="50"
+        fill="url(#Gradient2)"
+      />
     </svg>
 
     <svg width="70" height="130">
@@ -62,47 +167,147 @@
           <stop offset="100%" stop-color="blue" />
         </radialGradient>
       </defs>
-      <rect x="10" y="10" rx="15" ry="15" width="50" height="50" fill="url(#RadialGradient1)"/>
-      <rect x="10" y="70" rx="15" ry="15" width="50" height="50" fill="url(#RadialGradient2)"/>
+      <rect
+        x="10"
+        y="10"
+        rx="15"
+        ry="15"
+        width="50"
+        height="50"
+        fill="url(#RadialGradient1)"
+      />
+      <rect
+        x="10"
+        y="70"
+        rx="15"
+        ry="15"
+        width="50"
+        height="50"
+        fill="url(#RadialGradient2)"
+      />
     </svg>
 
     <svg width="120" height="120">
       <defs>
-        <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
+        <radialGradient
+          id="Gradient"
+          cx="0.5"
+          cy="0.5"
+          r="0.5"
+          fx="0.25"
+          fy="0.25"
+        >
           <stop offset="0%" stop-color="red" />
           <stop offset="100%" stop-color="blue" />
         </radialGradient>
       </defs>
-      <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#Gradient)" stroke="black" stroke-width="2"/>
-      <circle cx="60" cy="60" r="50" fill="transparent" stroke="white" stroke-width="2"/>
+      <rect
+        x="10"
+        y="10"
+        rx="15"
+        ry="15"
+        width="100"
+        height="100"
+        fill="url(#Gradient)"
+        stroke="black"
+        stroke-width="2"
+      />
+      <circle
+        cx="60"
+        cy="60"
+        r="50"
+        fill="transparent"
+        stroke="white"
+        stroke-width="2"
+      />
       <circle cx="35" cy="35" r="2" fill="white" stroke="white" />
       <circle cx="60" cy="60" r="2" fill="white" stroke="white" />
-      <text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt">
+      <text
+        x="38"
+        y="40"
+        fill="white"
+        font-family="sans-serif"
+        font-size="10pt"
+      >
         (fx,fy)
       </text>
-      <text x="63" y="63" fill="white" font-family="sans-serif" font-size="10pt">
+      <text
+        x="63"
+        y="63"
+        fill="white"
+        font-family="sans-serif"
+        font-size="10pt"
+      >
         (cx,cy)
       </text>
     </svg>
 
     <svg width="220" height="220">
       <defs>
-        <radialGradient id="GradientPad" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75" spreadMethod="pad">
+        <radialGradient
+          id="GradientPad"
+          cx="0.5"
+          cy="0.5"
+          r="0.4"
+          fx="0.75"
+          fy="0.75"
+          spreadMethod="pad"
+        >
           <stop offset="0%" stop-color="red" />
           <stop offset="100%" stop-color="blue" />
         </radialGradient>
-        <radialGradient id="GradientRepeat" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75" spreadMethod="repeat">
+        <radialGradient
+          id="GradientRepeat"
+          cx="0.5"
+          cy="0.5"
+          r="0.4"
+          fx="0.75"
+          fy="0.75"
+          spreadMethod="repeat"
+        >
           <stop offset="0%" stop-color="red" />
           <stop offset="100%" stop-color="blue" />
         </radialGradient>
-        <radialGradient id="GradientReflect" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75" spreadMethod="reflect">
+        <radialGradient
+          id="GradientReflect"
+          cx="0.5"
+          cy="0.5"
+          r="0.4"
+          fx="0.75"
+          fy="0.75"
+          spreadMethod="reflect"
+        >
           <stop offset="0%" stop-color="red" />
           <stop offset="100%" stop-color="blue" />
         </radialGradient>
       </defs>
-      <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#GradientPad)"/>
-      <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientRepeat)"/>
-      <rect x="120" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientReflect)"/>
+      <rect
+        x="10"
+        y="10"
+        rx="15"
+        ry="15"
+        width="100"
+        height="100"
+        fill="url(#GradientPad)"
+      />
+      <rect
+        x="10"
+        y="120"
+        rx="15"
+        ry="15"
+        width="100"
+        height="100"
+        fill="url(#GradientRepeat)"
+      />
+      <rect
+        x="120"
+        y="120"
+        rx="15"
+        ry="15"
+        width="100"
+        height="100"
+        fill="url(#GradientReflect)"
+      />
     </svg>
 
     <svg width="100" height="100">
@@ -117,8 +322,20 @@
         </linearGradient>
         <pattern id="Pattern" x="0" y="0" width=".125" height=".125">
           <rect x="0" y="0" width="25" height="25" fill="skyblue" />
-          <rect x="0" y="0" width="12.5" height="12.5" fill="url(#GradientPat2)" />
-          <circle cx="12.5" cy="12.5" r="10" fill="url(#GradientPat1)" fill-opacity="0.5"/>
+          <rect
+            x="0"
+            y="0"
+            width="12.5"
+            height="12.5"
+            fill="url(#GradientPat2)"
+          />
+          <circle
+            cx="12.5"
+            cy="12.5"
+            r="10"
+            fill="url(#GradientPat1)"
+            fill-opacity="0.5"
+          />
         </pattern>
       </defs>
       <rect fill="url(#Pattern)" stroke="black" width="200" height="200" />
@@ -156,7 +373,13 @@
           <stop offset="1" stop-color="white" />
         </linearGradient>
         <mask id="Mask">
-          <rect x="0" y="0" width="100" height="100" fill="url(#MaskGradient)"/>
+          <rect
+            x="0"
+            y="0"
+            width="100"
+            height="100"
+            fill="url(#MaskGradient)"
+          />
         </mask>
       </defs>
       <rect x="0" y="0" width="100" height="100" fill="green" />
@@ -165,7 +388,15 @@
 
     <svg width="100" height="100">
       <rect x="0" y="0" width="100" height="100" fill="blue" />
-      <circle cx="50" cy="50" r="25" stroke="yellow" stroke-width="20" stroke-opacity=".5" fill="red"/>
+      <circle
+        cx="50"
+        cy="50"
+        r="25"
+        stroke="yellow"
+        stroke-width="20"
+        stroke-opacity=".5"
+        fill="red"
+      />
     </svg>
 
     <svg width="100" height="100">
@@ -182,16 +413,44 @@
     <svg width="250" viewBox="0 0 200 85">
       <defs>
         <!-- Filter declaration -->
-        <filter id="MyFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="200" height="120">
+        <filter
+          id="MyFilter"
+          filterUnits="userSpaceOnUse"
+          x="0"
+          y="0"
+          width="200"
+          height="120"
+        >
           <!-- offsetBlur -->
           <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
           <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
           <!-- litPaint -->
-          <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specOut">
+          <feSpecularLighting
+            in="blur"
+            surfaceScale="5"
+            specularConstant=".75"
+            specularExponent="20"
+            lighting-color="#bbbbbb"
+            result="specOut"
+          >
             <fePointLight x="-5000" y="-10000" z="20000" />
           </feSpecularLighting>
-          <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
-          <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+          <feComposite
+            in="specOut"
+            in2="SourceAlpha"
+            operator="in"
+            result="specOut"
+          />
+          <feComposite
+            in="SourceGraphic"
+            in2="specOut"
+            operator="arithmetic"
+            k1="0"
+            k2="1"
+            k3="1"
+            k4="0"
+            result="litPaint"
+          />
           <!-- merge offsetBlur + litPaint -->
           <feMerge>
             <feMergeNode in="offsetBlur" />
@@ -201,8 +460,16 @@
       </defs>
       <!-- Graphic elements -->
       <g filter="url(#MyFilter)">
-        <path fill="none" stroke="#D90000" stroke-width="10" d="M50,66 c-50,0 -50,-60 0,-60 h100 c50,0 50,60 0,60z"/>
-        <path fill="#D90000" d="M60,56 c-30,0 -30,-40 0,-40 h80 c30,0 30,40 0,40z"/>
+        <path
+          fill="none"
+          stroke="#D90000"
+          stroke-width="10"
+          d="M50,66 c-50,0 -50,-60 0,-60 h100 c50,0 50,60 0,60z"
+        />
+        <path
+          fill="#D90000"
+          d="M60,56 c-30,0 -30,-40 0,-40 h80 c30,0 30,40 0,40z"
+        />
         <g fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana">
           <text x="52" y="52">SVG</text>
         </g>
@@ -211,22 +478,64 @@
 
     <svg width="100" height="100" viewBox="0 0 10 10">
       <rect width="10" height="10">
-        <animate attributeName="rx" values="0;5;0" dur="5s" repeatCount="indefinite"/>
+        <animate
+          attributeName="rx"
+          values="0;5;0"
+          dur="5s"
+          repeatCount="indefinite"
+        />
       </rect>
     </svg>
 
     <svg width="200" height="100">
-      <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1"/>
+      <rect
+        x="0"
+        y="0"
+        width="300"
+        height="100"
+        stroke="black"
+        stroke-width="1"
+      />
       <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
-        <animate attributeName="cx" from="0" to="250" dur="5s" repeatCount="indefinite"/>
+        <animate
+          attributeName="cx"
+          from="0"
+          to="250"
+          dur="5s"
+          repeatCount="indefinite"
+        />
       </circle>
-      <rect x="0" y="50" width="15" height="34" fill="blue" stroke="black" stroke-width="1">
-        <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 60 60" to="360 100 60" repeatCount="indefinite"/>
+      <rect
+        x="0"
+        y="50"
+        width="15"
+        height="34"
+        fill="blue"
+        stroke="black"
+        stroke-width="1"
+      >
+        <animateTransform
+          attributeName="transform"
+          begin="0s"
+          dur="20s"
+          type="rotate"
+          from="0 60 60"
+          to="360 100 60"
+          repeatCount="indefinite"
+        />
       </rect>
       <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
         <animateMotion path="M 0 0 H 200 Z" dur="3s" repeatCount="indefinite" />
       </circle>
-      <rect x="0" y="0" width="20" height="20" fill="blue" stroke="black" stroke-width="1">
+      <rect
+        x="0"
+        y="0"
+        width="20"
+        height="20"
+        fill="blue"
+        stroke="black"
+        stroke-width="1"
+      >
         <animateMotion
           path="M 150,80 H 50 Q 30,80 30,50 Q 30,20 50,20 H 150 Q 180,20,180,50 Q 180,80,150,80Z"
           dur="3s"
@@ -238,27 +547,112 @@
 
     <svg width="8cm" height="3cm" viewBox="0 0 800 300">
       <desc>Example anim01 - demonstrate animation elements</desc>
-      <rect x="1" y="1" width="798" height="298" fill="none" stroke="blue" stroke-width="2"/>
+      <rect
+        x="1"
+        y="1"
+        width="798"
+        height="298"
+        fill="none"
+        stroke="blue"
+        stroke-width="2"
+      />
       <!-- The following illustrates the use of the 'animate' element
         to animate a rectangles x, y, and width attributes so that
         the rectangle grows to ultimately fill the viewport. -->
-      <rect id="RectElement" x="300" y="100" width="300" height="100" fill="rgb(255,255,0)">
-        <animate attributeName="x" begin="0s" dur="3s" fill="freeze" from="300" to="0"/>
-        <animate attributeName="y" begin="0s" dur="3s" fill="freeze" from="100" to="0"/>
-        <animate attributeName="width" begin="0s" dur="3s" fill="freeze" from="300" to="800"/>
-        <animate attributeName="height" begin="0s" dur="3s" fill="freeze" from="100" to="300"/>
+      <rect
+        id="RectElement"
+        x="300"
+        y="100"
+        width="300"
+        height="100"
+        fill="rgb(255,255,0)"
+      >
+        <animate
+          attributeName="x"
+          begin="0s"
+          dur="3s"
+          fill="freeze"
+          from="300"
+          to="0"
+        />
+        <animate
+          attributeName="y"
+          begin="0s"
+          dur="3s"
+          fill="freeze"
+          from="100"
+          to="0"
+        />
+        <animate
+          attributeName="width"
+          begin="0s"
+          dur="3s"
+          fill="freeze"
+          from="300"
+          to="800"
+        />
+        <animate
+          attributeName="height"
+          begin="0s"
+          dur="3s"
+          fill="freeze"
+          from="100"
+          to="300"
+        />
       </rect>
       <!-- Set up a new user coordinate system so that
         the text string's origin is at (0,0), allowing
         rotation and scale relative to the new origin -->
       <g transform="translate(100,100)">
-        <text id="TextElement" x="0" y="0" font-family="Verdana" font-size="35.27" visibility="hidden">
+        <text
+          id="TextElement"
+          x="0"
+          y="0"
+          font-family="Verdana"
+          font-size="35.27"
+          visibility="hidden"
+        >
           It's alive!
-            <set attributeName="visibility" to="visible" begin="3s" dur="3s" fill="freeze"/>
-            <animateMotion path="M 0 0 L 100 100" begin="3s" dur="3s" fill="freeze"/>
-            <animate attributeName="fill" from="rgb(0,0,255)" to="rgb(128,0,0)" begin="3s" dur="6s" fill="freeze"/>
-            <animateTransform attributeName="transform" type="rotate" from="-30" to="0" begin="3s" dur="3s" fill="freeze"/>
-            <animateTransform attributeName="transform" type="scale" from="1" to="3" additive="sum" begin="3s" dur="3s" fill="freeze"/>
+          <set
+            attributeName="visibility"
+            to="visible"
+            begin="3s"
+            dur="3s"
+            fill="freeze"
+          />
+          <animateMotion
+            path="M 0 0 L 100 100"
+            begin="3s"
+            dur="3s"
+            fill="freeze"
+          />
+          <animate
+            attributeName="fill"
+            from="rgb(0,0,255)"
+            to="rgb(128,0,0)"
+            begin="3s"
+            dur="6s"
+            fill="freeze"
+          />
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="-30"
+            to="0"
+            begin="3s"
+            dur="3s"
+            fill="freeze"
+          />
+          <animateTransform
+            attributeName="transform"
+            type="scale"
+            from="1"
+            to="3"
+            additive="sum"
+            begin="3s"
+            dur="3s"
+            fill="freeze"
+          />
         </text>
       </g>
     </svg>
@@ -267,7 +661,7 @@
 
 <script>
 export default {
-  name: "SvgPage"
+  name: "SvgPage",
 };
 </script>
 

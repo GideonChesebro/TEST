@@ -317,7 +317,7 @@ export default {
 
       //Shadowed text
       ctx.save();
-      ctx.translate(330,380);
+      ctx.translate(330, 380);
       ctx.shadowOffsetX = 2;
       ctx.shadowOffsetY = 2;
       ctx.shadowBlur = 2;
@@ -328,8 +328,8 @@ export default {
       ctx.restore();
 
       //Stroke text
-      ctx.font = '48px serif';
-      ctx.strokeText('Hello world', 125, 625);
+      ctx.font = "48px serif";
+      ctx.strokeText("Hello world", 125, 625);
       ctx.save();
       ctx.restore();
     },

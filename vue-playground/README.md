@@ -1,4 +1,4 @@
-# my-first-app
+# vue-playground
 
 ## Project setup
 ```

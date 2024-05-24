@@ -55,17 +55,18 @@
           placeholder="Zipcode"
         />
       </p>
-      <input type="submit" value="Get Distance">
-          <p class="zipcodePar" v-if="zipDistance">You are {{ zipDistance }} miles away from Baker Book House</p>
+      <input type="submit" value="Get Distance" />
+      <p class="zipcodePar" v-if="zipDistance">
+        You are {{ zipDistance }} miles away from Baker Book House
+      </p>
     </form>
-
   </div>
 </template>
 
 <script>
 import { data } from "./data";
 import { ref } from "vue";
-import * as axios from 'axios'
+import * as axios from "axios";
 
 export default {
   name: "HelloWorld",
@@ -88,27 +89,28 @@ export default {
     //Not used: weather.id, weather.icon, base, sys.type, sys.id, sys.message, id, cod, rain.1h, rain.3h, snow.1h, snow.3h, main.sea_level, main.ground_level
   },
   setup() {
-    const zipper = ref()
-    const zipDistance = ref()
-    async function getZipDistance(){
+    const zipper = ref();
+    const zipDistance = ref();
+    async function getZipDistance() {
       try {
-        const zipCall = (zip) => `https://www.zipcodeapi.com/rest/js-FlFwHbuWyh1A3EavFZ1McaskcT6DZI9Lkga0gQRPgYTxrEmqnG2aOISevW1QNPCj/distance.json/49546/${zip}/miles`
-        if(zipper.value){
+        const zipCall = (zip) =>
+          `https://www.zipcodeapi.com/rest/js-FlFwHbuWyh1A3EavFZ1McaskcT6DZI9Lkga0gQRPgYTxrEmqnG2aOISevW1QNPCj/distance.json/49546/${zip}/miles`;
+        if (zipper.value) {
           const zipResponse = await axios.get(zipCall(zipper.value));
-          const distance = zipResponse.data.distance
-          return distance
+          const distance = zipResponse.data.distance;
+          return distance;
         }
       } catch (error) {
-        if(error.message === "Network Error"){
-          console.log("Could not get data!")
+        if (error.message === "Network Error") {
+          console.log("Could not get data!");
         }
       }
     }
-    async function pushButton () {
-      zipDistance.value = await getZipDistance()
+    async function pushButton() {
+      zipDistance.value = await getZipDistance();
     }
-    return {zipper, zipDistance, pushButton}
-  }
+    return { zipper, zipDistance, pushButton };
+  },
 };
 </script>
 
